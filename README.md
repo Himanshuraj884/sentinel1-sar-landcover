@@ -87,3 +87,13 @@ Tested with Python 3.13, TensorFlow 2.21, Keras 3.15, scikit-learn 1.9.
 
 MIT
 
+
+## Reproduce
+
+Download EuroSAT-SAR (MIT licence) from https://huggingface.co/datasets/wangyi111/EuroSAT-SAR and unzip it into data/raw/, then run:
+
+```
+python run_all.py --data-dir data/raw/EuroSAT-SAR --input-db --split random
+```
+
+Values are already in dB and files carry no scene IDs, so the random split is used.
