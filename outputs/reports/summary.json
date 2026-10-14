@@ -1,0 +1,153 @@
+{
+  "synthetic": false,
+  "split": "random",
+  "despeckle": true,
+  "n_patches": 27000,
+  "n_train": 18900,
+  "n_val": 4050,
+  "n_test": 4050,
+  "classes": [
+    "AnnualCrop",
+    "Forest",
+    "HerbaceousVegetation",
+    "Highway",
+    "Industrial",
+    "Pasture",
+    "PermanentCrop",
+    "Residential",
+    "River",
+    "SeaLake"
+  ],
+  "eda": {
+    "anova": {
+      "vv_mean": {
+        "F": 3265.05224609375,
+        "p": 0.0,
+        "kruskal_H": 17737.53125,
+        "kruskal_p": 0.0,
+        "eta_squared": 0.5212458118721386
+      },
+      "vh_mean": {
+        "F": 4891.98779296875,
+        "p": 0.0,
+        "kruskal_H": 18134.1328125,
+        "kruskal_p": 0.0,
+        "eta_squared": 0.6199546893558983
+      },
+      "ratio_mean": {
+        "F": 625.0982055664062,
+        "p": 0.0,
+        "kruskal_H": 5744.4765625,
+        "kruskal_p": 0.0,
+        "eta_squared": 0.17248903758155867
+      },
+      "rvi_mean": {
+        "F": 439.7117614746094,
+        "p": 0.0,
+        "kruskal_H": 5080.9609375,
+        "kruskal_p": 0.0,
+        "eta_squared": 0.12787521502381033
+      }
+    },
+    "pca_explained_variance": [
+      0.45497408509254456,
+      0.250885009765625
+    ],
+    "kmeans_ari": 0.2863672380972694,
+    "kmeans_nmi": 0.4441798556333246
+  },
+  "random_forest": {
+    "val_accuracy": 0.7269135802469135,
+    "test_accuracy": 0.7348148148148148,
+    "test_macro_f1": 0.7226786623839928,
+    "report": {
+      "AnnualCrop": {
+        "precision": 0.7468085106382979,
+        "recall": 0.78,
+        "f1-score": 0.7630434782608696,
+        "support": 450.0
+      },
+      "Forest": {
+        "precision": 0.7686116700201208,
+        "recall": 0.8488888888888889,
+        "f1-score": 0.8067581837381204,
+        "support": 450.0
+      },
+      "HerbaceousVegetation": {
+        "precision": 0.6056782334384858,
+        "recall": 0.4266666666666667,
+        "f1-score": 0.500651890482399,
+        "support": 450.0
+      },
+      "Highway": {
+        "precision": 0.5384615384615384,
+        "recall": 0.48533333333333334,
+        "f1-score": 0.5105189340813464,
+        "support": 375.0
+      },
+      "Industrial": {
+        "precision": 0.8859416445623343,
+        "recall": 0.8906666666666667,
+        "f1-score": 0.8882978723404256,
+        "support": 375.0
+      },
+      "Pasture": {
+        "precision": 0.46511627906976744,
+        "recall": 0.6,
+        "f1-score": 0.5240174672489083,
+        "support": 300.0
+      },
+      "PermanentCrop": {
+        "precision": 0.5691489361702128,
+        "recall": 0.5706666666666667,
+        "f1-score": 0.5699067909454061,
+        "support": 375.0
+      },
+      "Residential": {
+        "precision": 0.8385744234800838,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8629989212513485,
+        "support": 450.0
+      },
+      "River": {
+        "precision": 0.8455284552845529,
+        "recall": 0.832,
+        "f1-score": 0.8387096774193549,
+        "support": 375.0
+      },
+      "SeaLake": {
+        "precision": 0.9705882352941176,
+        "recall": 0.9533333333333334,
+        "f1-score": 0.9618834080717489,
+        "support": 450.0
+      },
+      "accuracy": 0.7348148148148148,
+      "macro avg": {
+        "precision": 0.7234457926419513,
+        "recall": 0.7276444444444444,
+        "f1-score": 0.7226786623839928,
+        "support": 4050.0
+      },
+      "weighted avg": {
+        "precision": 0.7340265634425722,
+        "recall": 0.7348148148148148,
+        "f1-score": 0.7315787321065781,
+        "support": 4050.0
+      }
+    },
+    "cv_kind": "StratifiedKFold(5)",
+    "cv_accuracy_mean": 0.7295424836601307,
+    "cv_accuracy_std": 0.004591939364771331,
+    "ablation_test_accuracy": {
+      "VV only": 0.6148148148148148,
+      "VH only": 0.6051851851851852,
+      "VV + VH": 0.7140740740740741,
+      "all features": 0.7348148148148148
+    }
+  },
+  "cnn": {
+    "test_accuracy": 0.8575308641975309,
+    "test_macro_f1": 0.8517107050311763,
+    "epochs_run": 40
+  }
+}

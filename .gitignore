@@ -6,3 +6,4 @@ data/sar/
 outputs/models/
 *.keras
 *.joblib
+data/raw/
